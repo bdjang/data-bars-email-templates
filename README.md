@@ -1,19 +1,24 @@
 # Accessible Data in Email Templates
 
 ## Background
-A simple and straightforward way to display horizontal and vertical bar charts coded in pure HTML/CSS.
+Data displayed in images are not accessible to screen readers and must rely on the `<alt>` tag for a description. However, it can be challenging to sum up the numbers, labels, and data within the `<alt>` tag. Another method to display data within email is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect the live text, numbers, and labels within these bar charts.
 
-Some advantages of this method:
-* Bar charts coded in HTML/CSS are more accessible compared to bar charts displayed through images. Live text is used for numbers and labels which allow screen readers to pick up that information.
-* They can be dynamic since data bar widths, chart numbers, label text, and hex colors are coded in HTML/CSS. These fields can be set up as variables within an ESP that can then populate and render when the user opens up the email.
+Additional advantages of this method:
+* Bar charts coded in HTML/CSS can be mobile responsive through media queries.
 * The load times are much faster compared to downloading images.
-* Can be coded to be mobile responsive.
-* Bar charts coded in HTML/CSS look great in dark mode.
+* Bar charts coded in HTML/CSS can be dynamic. Since data bar widths, chart numbers, label text, and hex colors are coded in HTML/CSS, these fields can be set up as variables within an ESP.
+* Bar charts coded in HTML/CSS work well in dark mode.
 
-Some disadvantages of this method:
-* It takes time and effort to code and test these bar charts compared to displaying them as an image within email templates.
+Disadvantages of this method:
+* Time is required to code and test these bar charts compared to displaying them as an image within email templates.
 * For very complex and detailed bar charts and graphs, HTML/CSS is not a viable option.
 * Bar charts coded in HTML/CSS can take up a good amount of email file weight.
+
+## Basics
+
+## Customizing Bar Charts
+
+## CSS Animations
 
 <!-- Is there another method to display data tables, bar graphs, and other visuals in email templates without using images? Is there a way to display data in email templates that is accessible?
 
