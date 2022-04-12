@@ -1,7 +1,9 @@
 # Accessible Data in Email Templates
 
 ## Background
-Data displayed in images are not accessible to screen readers and must rely on the `<alt>` tag for a description. However, it can be challenging to sum up the numbers, labels, and data within the `<alt>` tag. Another method to display data within email is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect the live text, numbers, and labels within these bar charts.
+One of the most common ways to display data within email templates is through images. Unfortunately, this method of displaying data creates an accessibility problem since screen readers cannot detect data, numbers, and labels within these images. `<alt>` tags are available to provide a description of the image, however, it can be challenging to sum up the data in a concise and efficient manner.
+
+Another way to display data within email templates is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect and engage with the live text, numbers, and labels within these bar charts.
 
 Additional advantages of this method:
 * Bar charts coded in HTML/CSS can be mobile responsive through media queries.
