@@ -1,20 +1,18 @@
 # Accessible Data in Email Templates
 
 ## Background
-Displaying data through images within email templates create accessibility issues because screen readers cannot detect data, numbers, and text within these images.
+One way to display data within email templates is to code data visuals, such as horizontal and vertical bar charts, completely in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
 
-Another way to display data within email templates is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and data within these bar charts.
+**Some advantages to this method**:
+* Charts can be mobile responsive through media queries.
+* Load times are faster compared to downloading images.
+* Can be dynamic - since data bar widths, chart numbers, label text, and hex colors are coded in HTML/CSS, these fields can be set up as variables within ESPs.
+* Dark mode compatible.
 
-Additional advantages of this method:
-* Bar charts coded in HTML/CSS can be mobile responsive through media queries.
-* The load times are much faster compared to downloading images.
-* Bar charts coded in HTML/CSS can be dynamic. Since data bar widths, chart numbers, label text, and hex colors are coded in HTML/CSS, these fields can be set up as variables within an ESP.
-* Bar charts coded in HTML/CSS work well in dark mode.
-
-Disadvantages of this method:
-* Time is required to code and test these bar charts compared to displaying them as an image within email templates.
-* For very complex and detailed bar charts and graphs, HTML/CSS is not a viable option.
-* Bar charts coded in HTML/CSS can take up a good amount of email file weight.
+**Disadvantages of this method**:
+* Requires time to code and test these bar charts.
+* For very complex and detailed bar charts and graphs, HTML/CSS is not an option. Simpler is better.
+* Can take up email file weight.
 
 ## Basics
 
