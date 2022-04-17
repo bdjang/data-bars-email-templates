@@ -1,24 +1,99 @@
 # Accessible Data in Email Templates
 
 ## Background
-One way to display data within email templates is to code data visuals, such as horizontal and vertical bar charts, completely in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
+One way to display data within email templates is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
 
 **Some advantages to this method**:
 * Charts can be mobile responsive through media queries.
 * Load times are faster compared to downloading images.
-* Can be dynamic - since data bar widths, chart numbers, label text, and hex colors are coded in HTML/CSS, these fields can be set up as variables within ESPs.
-* Dark mode compatible.
+* Can be dynamic - since data bar widths, chart numbers, label text, and colors are coded in HTML/CSS, these fields can be set up as variables within ESPs.
+* Additional code is not required to make these charts compatible in dark mode.
 
 **Disadvantages of this method**:
 * Requires time to code and test these bar charts.
-* For very complex and detailed bar charts and graphs, HTML/CSS is not an option. Simpler is better.
+* For very complex and detailed bar charts and graphs, this method is not an option.
 * Can take up email file weight.
 
 ## Basics
 
-## Customizing Bar Charts
+Start be creating a `<table>` element with `<td>` cells for the data bar name, data bar, and end label. In this example, the name and end label will be place outside the data bar.
+
+```html
+<table width="600">
+  <tr>
+    <td>Data bar #1</td> <!-- Data bar name -->
+    <td></td> <!-- Data bar -->
+    <td>Label #1</td> <!-- End label -->
+  </tr>
+</table>
+```
+
+Assign `height`, `width`, and `background-color` values to each `<td>` cell. The `width` values can be expressed in either pixel or percentage.
+
+```html
+<table width="600">
+  <tr>
+    <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
+    <td height="24" width="65%" style="background-color: #0dbd67;"></td>
+    <td height="24" width="15%" style="background-color: #ffffff;">Label #1</td>
+  </tr>
+</table>
+```
+
+To change the size of the data bar, adjust the `width` value.
+
+```html
+<table width="600">
+  <tr>
+    <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
+    <td height="24" width="35%" style="background-color: #0dbd67;"></td> <!-- The data bar width was reduced from 65% to 35%. The difference is added to the `<td>` cell below. -->
+    <td height="24" width="45%" style="background-color: #ffffff;">Label #1</td>
+  </tr>
+</table>
+```
+
+To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<td>` elements. This will allow you to have more control over the spacing between each data bar. Adjust the spacing using `padding` within the wrapping `<td>` cell.
+
+```html
+<table>
+  <tr>
+    <td style="padding: 0 0 2px 0;">
+      <table width="600">
+        <tr>
+          <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
+          <td height="24" width="35%" style="background-color: #0dbd67;"></td>
+          <td height="24" width="45%" style="background-color: #ffffff;">Label #1</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 0 0 2px 0;">
+      <table width="600">
+        <tr>
+          <td height="24" width="20%" style="background-color: #ffffff;">Data bar #2</td>
+          <td height="24" width="65%" style="background-color: #0d5fbd;"></td>
+          <td height="24" width="15%" style="background-color: #ffffff;">Label #2</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+```
+
+<!-- ## Mobile Responsiveness
+- to make this data bar chart mobile responsive, make sure the widths for all the `<td>` cells are in percentages
+- set the table wrapper as a fixed width but in media queries, change it to 100%
+- finally decrease the font sizes for the any text used. Large font-sizes will skew the actual size of the data bars.
 
 ## CSS Animations
+- for certain email clients, CSS animations are compatible (Apple Mail, iOS, etc.)
+- use keyframes to create an animation of data bars growing
+
+## Dark Mode
+- without any adjustments, these data bars are compatible in dark mode -->
+
+<!-- ## Dynamic Rendering -->
 
 <!-- Is there another method to display data tables, bar graphs, and other visuals in email templates without using images? Is there a way to display data in email templates that is accessible?
 
