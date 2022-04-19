@@ -16,7 +16,7 @@ One way to display data within email templates is to code horizontal and vertica
 
 ## Basics
 
-Start be creating a `<table>` element with `<td>` cells for the data bar name, data bar, and end label. In this example, the name and end label will be place outside the data bar.
+Start be creating a `<table>` element with `<td>` cells for the **data bar name**, **data bar**, and **end label**. In this chart example, the name and end label will be place outside the data bar.
 
 ```html
 <table width="600">
@@ -54,7 +54,7 @@ To change the size of the data bar, adjust the `width` value.
 </table>
 ```
 
-To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<td>` elements. This will allow you to have more control over the spacing between each data bar. Adjust the spacing using `padding` within the wrapping `<td>` cell.
+To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<td>` elements. This will allow you to have more control over the spacing between each horizontal data bar. Adjust the spacing using `padding` within the outer `<td>` cell.
 
 ```html
 <table>
