@@ -40,6 +40,8 @@ Assign `height`, `width`, and `background-color` values to each `<td>` cell. The
 </table>
 ```
 
+![accessible-data1](https://user-images.githubusercontent.com/6575035/163897218-beb5f43c-50f9-4d1e-92b8-82ffa5e10beb.png)
+
 To change the size of the data bar, adjust the `width` value.
 
 ```html
@@ -81,17 +83,19 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
 </table>
 ```
 
+![accessible-data2](https://user-images.githubusercontent.com/6575035/163897313-4fa95403-3ad9-4c1a-982e-e11b32fc472c.png)
+
 <!-- ## Mobile Responsiveness
 - to make this data bar chart mobile responsive, make sure the widths for all the `<td>` cells are in percentages
 - set the table wrapper as a fixed width but in media queries, change it to 100%
 - finally decrease the font sizes for the any text used. Large font-sizes will skew the actual size of the data bars.
 
+## Dark Mode
+- without any adjustments, these data bars are compatible in dark mode
+
 ## CSS Animations
 - for certain email clients, CSS animations are compatible (Apple Mail, iOS, etc.)
-- use keyframes to create an animation of data bars growing
-
-## Dark Mode
-- without any adjustments, these data bars are compatible in dark mode -->
+- use keyframes to create an animation of data bars growing -->
 
 <!-- ## Dynamic Rendering -->
 
