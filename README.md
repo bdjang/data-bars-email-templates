@@ -1,7 +1,7 @@
 # Accessible Data in Email Templates
 
 ## Background
-One way to display data within email templates is to code horizontal and vertical bar charts completely in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
+One way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
 
 **Some advantages to this method**:
 * Charts can be mobile responsive through media queries.
@@ -16,7 +16,7 @@ One way to display data within email templates is to code horizontal and vertica
 
 ## Basics
 
-Start be creating a `<table>` element with `<td>` cells for the **data bar name**, **data bar**, and **end label**. In this chart example, the name and end label will be place outside the data bar.
+Start with a `<table>` element and `<td>` cells for the **data bar name**, **data bar**, and **end label**. In this chart example, the name and end label will be place outside the data bar.
 
 ```html
 <table width="600">
@@ -85,12 +85,13 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
 
 ![accessible-data2](https://user-images.githubusercontent.com/6575035/163897313-4fa95403-3ad9-4c1a-982e-e11b32fc472c.png)
 
-<!-- ## Mobile Responsiveness
-- to make this data bar chart mobile responsive, make sure the widths for all the `<td>` cells are in percentages
-- set the table wrapper as a fixed width but in media queries, change it to 100%
-- finally decrease the font sizes for the any text used. Large font-sizes will skew the actual size of the data bars.
+## Mobile Responsiveness
 
-## Dark Mode
+To make this chart mobile responsive, make sure all the `<td>` cell widths are percentages. Then change the `<table>` wrapper width value to 100% through media queries.
+
+Reduce the font-size for the any of the text used in this chart. Large text will skew the size of the data bars in mobile view.
+
+<!-- ## Dark Mode
 - without any adjustments, these data bars are compatible in dark mode
 
 ## CSS Animations
