@@ -1,7 +1,7 @@
 # Accessible Data in Email Templates
 
 ## Background
-One way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these bar charts.
+One way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these charts.
 
 **Some advantages to this method**:
 * Charts can be mobile responsive through media queries.
@@ -28,28 +28,28 @@ Start with a `<table>` element and `<td>` cells for the **data bar name**, **dat
 </table>
 ```
 
-Assign `height`, `width`, and `background-color` values to each `<td>` cell. The `width` values can be expressed in either pixel or percentage.
+Define the `height` and `width` for each `<td>` cell *within* the `<style>` tag.
 
 ```html
 <table width="600">
   <tr>
-    <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
-    <td height="24" width="65%" style="background-color: #0dbd67;"></td>
-    <td height="24" width="15%" style="background-color: #ffffff;">Label #1</td>
+    <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
+    <td style="background-color: #0dbd67; height: 24px; width: 65%;"></td>
+    <td style="background-color: #ffffff; height: 24px; width: 15%;">Label #1</td>
   </tr>
 </table>
 ```
 
 ![accessible-data1](https://user-images.githubusercontent.com/6575035/163897218-beb5f43c-50f9-4d1e-92b8-82ffa5e10beb.png)
 
-To change the size of the data bar, adjust the `width` value.
+To change the size of the data bar, adjust the `width` values.
 
 ```html
 <table width="600">
   <tr>
-    <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
-    <td height="24" width="35%" style="background-color: #0dbd67;"></td> <!-- The data bar width was reduced from 65% to 35%. The difference is added to the `<td>` cell below. -->
-    <td height="24" width="45%" style="background-color: #ffffff;">Label #1</td>
+    <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
+    <td style="background-color: #0dbd67; height: 24px; width: 35%;"></td> <!-- The data bar width was reduced from 65% to 35%. The difference is added to the `<td>` cell below. -->
+    <td style="background-color: #ffffff; height: 24px; width: 45%;">Label #1</td>
   </tr>
 </table>
 ```
@@ -62,9 +62,9 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
     <td style="padding: 0 0 2px 0;">
       <table width="600">
         <tr>
-          <td height="24" width="20%" style="background-color: #ffffff;">Data bar #1</td>
-          <td height="24" width="35%" style="background-color: #0dbd67;"></td>
-          <td height="24" width="45%" style="background-color: #ffffff;">Label #1</td>
+          <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
+          <td style="background-color: #0dbd67; height: 24px; width: 35%;"></td>
+          <td style="background-color: #ffffff; height: 24px; width: 45%;">Label #1</td>
         </tr>
       </table>
     </td>
@@ -73,9 +73,9 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
     <td style="padding: 0 0 2px 0;">
       <table width="600">
         <tr>
-          <td height="24" width="20%" style="background-color: #ffffff;">Data bar #2</td>
-          <td height="24" width="65%" style="background-color: #0d5fbd;"></td>
-          <td height="24" width="15%" style="background-color: #ffffff;">Label #2</td>
+          <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #2</td>
+          <td style="background-color: #0d5fbd; height: 24px; width: 65%;"></td>
+          <td style="background-color: #ffffff; height: 24px; width: 15%;">Label #2</td>
         </tr>
       </table>
     </td>
@@ -87,9 +87,7 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
 
 ## Mobile Responsiveness
 
-To make this chart mobile responsive, make sure all the `<td>` cell widths are percentages. Then change the `<table>` wrapper width value to 100% through media queries.
-
-Reduce the font-size for the any of the text used in this chart. Large text will skew the size of the data bars in mobile view.
+To make this chart mobile responsive, make sure all the `<td>` cell widths are expressed as percentages. Then change the `<table>` wrapper width value to 100% through media queries and reduce the `font-size` for the any chart text. Large text will skew the size of the data bars in mobile view.
 
 <!-- ## Dark Mode
 - without any adjustments, these data bars are compatible in dark mode
