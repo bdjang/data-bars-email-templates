@@ -1,11 +1,12 @@
-# Accessible Data in Email Templates
+# Data Bar Charts in Email Templates
 
 ## Background
-One way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS. This method will allow screen readers to detect any live text, numbers, and labels within these charts.
+Is there another way to display data visuals in email templates without relying on images and the `<alt>` tag? An alternative way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS.
 
 **Some advantages to this method**:
 * Charts can be mobile responsive through media queries.
 * Load times are faster compared to downloading images.
+* Screen readers can detect live text, numbers, and labels in these charts.
 * Can be dynamic - since data bar widths, chart numbers, label text, and colors are coded in HTML/CSS, these fields can be set up as variables within ESPs.
 * Additional code is not required to make these charts compatible in dark mode.
 
@@ -42,7 +43,7 @@ Define the `height` and `width` for each `<td>` cell *within* the `<style>` tag.
 
 ![accessible-data1](https://user-images.githubusercontent.com/6575035/163897218-beb5f43c-50f9-4d1e-92b8-82ffa5e10beb.png)
 
-To change the size of the data bar, adjust the `width` values.
+Adjust the `width` values to change the size of the data bar. Since all three columns are sharing the width percentage, make sure all `<td>` cells add up to 100%.
 
 ```html
 <table width="600">
@@ -87,7 +88,7 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
 
 ## Mobile Responsiveness
 
-To make this chart mobile responsive, make sure all the `<td>` cell widths are expressed as percentages. Then change the `<table>` wrapper width value to 100% through media queries and reduce the `font-size` for the any chart text. Large text will skew the size of the data bars in mobile view.
+To make this chart mobile responsive, make sure all the `<td>` cell widths are set as percentages. Then change the `<table>` wrapper width value to 100% through media queries and reduce the `font-size` for the any chart text. Large text will skew the size of the data bars in mobile view.
 
 <!-- ## Dark Mode
 - without any adjustments, these data bars are compatible in dark mode
