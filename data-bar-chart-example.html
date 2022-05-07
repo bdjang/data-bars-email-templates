@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- Enable Microsoft VML -->
+<html lang="en"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" http-equiv="Content-Type">
+
+<style type="text/css">
+
+    /** { border: 1px dotted red !important; }
+    td { border: 1px dotted violet !important; }
+    img { border: 1px solid blue !important; }
+    br { border: 1px dashed limegreen !important; content: "A" !important; display: block !important; }
+    a { border: 1px solid #f441d0 !important; }*/
+
+    /* CLIENT-SPECIFIC STYLES */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+  
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    /* Remove spacing between tables in Outlook 2007 and up */
+
+    img { -ms-interpolation-mode: bicubic; }
+    /* Allow smoother rendering of resized image in Internet Explorer */
+
+    /* RESET STYLES */
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+
+    /* DATABAR CSS ANIMATION */
+    @-webkit-keyframes databarGrow { from { width: 0; } }
+    /* 5.7.22
+    Changing the width in the label data bar to "auto" makes the animation start from the left instead of the right. Need to test and see if "auto" breaks anything in other email clients */
+    .databarGrow { position: relative; -webkit-animation-delay: 0s; -webkit-animation-duration: 3s; -webkit-animation-fill-mode: backwards; -webkit-animation-name: databarGrow; -webkit-animation-timing-function: ease-in-out; }
+    .databarGrow:hover { opacity: .8 !important; }
+
+    /* MOBILE STYLES */
+    @media screen and (max-width: 691px) {
+
+        /* DATABAR CHART STYLES */
+        .chartMobile { width: 100% !important; }
+        .chartLabel1, .dataBar1, .dataText { font-size: 9px !important; }
+
+        /* GMAIL APP ANDROID STYLES */
+        div > u + .gmailApp table, div > u + .gmailApp .chartMobile { width: 100% !important; }
+        div > u + .gmailApp .chartLabel1, div > u + .gmailApp .dataBar1, div > u + .gmailApp .dataText { font-size: 9px !important; }
+
+        /* GMAIL APP IOS STYLES */
+        u + .gmailApp table, u + .gmailApp .chartMobile { width: 100% !important; }
+        u + .gmailApp .chartLabel1, u + .gmailApp .dataBar1, u + .gmailApp .dataText { font-size: 9px !important; }
+    }
+    </style>
+</head>
+
+<body class="gmailApp" bgcolor="#ffffff" style="background-color: #ffffff; height: 100%; margin: 0; padding: 0; width: 100%;">
+
+    <div style="font-family: Consolas, sans-serif; text-align: center;"><h1>Data Bar Chart Example</h1></div>
+
+    <!-- DATA BAR CHART -->
+    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px;">
+        <tr>
+            <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #574d4d; margin: 0; padding: 20px; width: 100%;">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                        <!-- DATA BAR #1 -->
+                        <tr>
+                            <td align="left" style="padding: 0;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0" class="chartMobile">
+                                    <tr>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #1</td>
+                                        <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 60%; height: 28px;"></td>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 15%; height: 28px;">&nbsp;Label #1</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end data bar #1 -->
+
+                        <!-- DATA BAR #2 -->
+                        <tr>
+                            <td align="left" style="padding: 10px 0 0 0;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0" class="chartMobile">
+                                    <tr>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #2</td>
+                                        <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 33%; height: 28px;"></td>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 42%; height: 28px;">&nbsp;Label #2</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end data bar #2 -->
+
+                        <!-- DATA BAR #3 -->
+                        <tr>
+                            <td align="left" style="padding: 10px 0 0 0;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0" class="chartMobile">
+                                    <tr>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #3</td>
+                                        <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 6.5%; height: 28px;"></td>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 68.5%; height: 28px;">&nbsp;Label #3</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end data bar #3 -->
+
+                        <!-- DATA BAR #4 -->
+                        <tr>
+                            <td align="left" style="padding: 10px 0 0 0;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0" class="chartMobile">
+                                    <tr>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #4</td>
+                                        <td class="databarGrow" align="left" style="background: linear-gradient(to right, #d41919 0%, #ff0000 100%); background-color: #d41919; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 51%; height: 28px;"></td>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 24%; height: 28px;">&nbsp;Label #4</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end data bar #4 -->
+
+                        <!-- DATA BAR #5 -->
+                        <tr>
+                            <td align="left" style="padding: 10px 0 0 0;">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0" class="chartMobile">
+                                    <tr>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #5</td>
+                                        <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;"></td>
+                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 50%; height: 28px;">&nbsp;Label #5</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- end data bar #4 -->
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- end data bar chart -->
+
+  </body>
+</html>
