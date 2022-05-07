@@ -1,7 +1,7 @@
 # Data Bar Charts in Email Templates
 
 ## Background
-Is there another way to display data visuals in email templates without relying on images and the `<alt>` tag? An alternative way to display data within email templates is to code horizontal and vertical bar charts in HTML/CSS.
+An alternative way to display data without using images is to code horizontal bar charts in HTML/CSS.
 
 **Some advantages to this method**:
 * Charts can be mobile responsive through media queries.
@@ -90,31 +90,12 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
 
 To make this chart mobile responsive, make sure all the `<td>` cell widths are set as percentages. Then change the `<table>` wrapper width value to 100% through media queries and reduce the `font-size` for the any chart text. Large text will skew the size of the data bars in mobile view.
 
-<!-- ## Dark Mode
-- without any adjustments, these data bars are compatible in dark mode
+## Dark Mode
+
+These data bar charts are compatible in dark mode just as is - they do not require any additional custom code.
 
 ## CSS Animations
-- for certain email clients, CSS animations are compatible (Apple Mail, iOS, etc.)
-- use keyframes to create an animation of data bars growing -->
+
+For specific email clients (Apple Mail, iOS, etc.) that support CSS animations, you can progressively enhance these bar charts and create an animation effect.
 
 <!-- ## Dynamic Rendering -->
-
-<!-- Is there another method to display data tables, bar graphs, and other visuals in email templates without using images? Is there a way to display data in email templates that is accessible?
-
-Start Simple
-
-Create a column for the databar name, the actual databar, and the data end label.
-Define the width for each <td> cell within the style tag.
-Since all three columns are sharing the width percentage, make sure all <td> cells add up to 100%. I usually set the databar name column and the data end label to specific widths. The databar width in the middle will change.
-Define the height of each <td> cell within the style tag.
-
-
-
-In order to make this mobile responsive, add some media queries that sets the width of the table wrapper to 100%. Also, reduce the font-size for the databar name and data end label to fit in smaller screen sizes.
-
-Now you have a basic horizontal data chart that is accessible to screen readers since live text is used.
-
-
-If you want to add top labels, simply add an additional <tr> above and add the relevant text to give more context to the chart.
-
- -->
