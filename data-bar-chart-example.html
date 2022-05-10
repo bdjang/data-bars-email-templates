@@ -45,7 +45,13 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
     /* DATABAR CSS ANIMATION */
     @-webkit-keyframes databarGrow { from { width: 0; } }
     /* 5.7.22
-    Changing the width in the label data bar to "auto" makes the animation start from the left instead of the right. Need to test and see if "auto" breaks anything in other email clients */
+    Changing the width in the label data bar to "auto" makes the animation start from the left instead of the right.
+    
+    5.9.22
+    Set the width/height values OUTSIDE of the <style> tag for vertical data bars.
+    Set the width/height values BOTH OUTSIDE and INSIDE of the <style> tag for horizontal data bars - this is for Yahoo! Mail.
+    For the end label <td> cell for horizontal data bars, the width can be set to "auto" to make CSS animations work properly.
+    */
     .databarGrow { position: relative; -webkit-animation-delay: 0s; -webkit-animation-duration: 3s; -webkit-animation-fill-mode: backwards; -webkit-animation-name: databarGrow; -webkit-animation-timing-function: ease-in-out; }
     .databarGrow:hover { opacity: .8 !important; }
 
@@ -84,7 +90,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                     <tr>
                                         <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #1</td>
                                         <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 60%; height: 28px;"></td>
-                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 15%; height: 28px;">&nbsp;Label #1</td>
+                                        <td class="databarGrow dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: auto; height: 28px;" width="auto" height="28px">&nbsp;Label #1</td>
                                     </tr>
                                 </table>
                             </td>
@@ -98,7 +104,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                     <tr>
                                         <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #2</td>
                                         <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 33%; height: 28px;"></td>
-                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 42%; height: 28px;">&nbsp;Label #2</td>
+                                        <td class="databarGrow dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: auto; height: 28px;" width="auto" height="28px">&nbsp;Label #2</td>
                                     </tr>
                                 </table>
                             </td>
@@ -112,7 +118,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                     <tr>
                                         <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #3</td>
                                         <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 6.5%; height: 28px;"></td>
-                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 68.5%; height: 28px;">&nbsp;Label #3</td>
+                                        <td class="databarGrow dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: auto; height: 28px;" width="auto" height="28px">&nbsp;Label #3</td>
                                     </tr>
                                 </table>
                             </td>
@@ -126,7 +132,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                     <tr>
                                         <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #4</td>
                                         <td class="databarGrow" align="left" style="background: linear-gradient(to right, #d41919 0%, #ff0000 100%); background-color: #d41919; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 51%; height: 28px;"></td>
-                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 24%; height: 28px;">&nbsp;Label #4</td>
+                                        <td class="databarGrow dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: auto; height: 28px;" width="auto" height="28px">&nbsp;Label #4</td>
                                     </tr>
                                 </table>
                             </td>
@@ -140,7 +146,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                     <tr>
                                         <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;">Data bar #5</td>
                                         <td class="databarGrow" align="left" style="background: linear-gradient(to right, #969696 0%, #b5b5b5 100%); background-color: #969696; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 25%; height: 28px;"></td>
-                                        <td class="dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: 50%; height: 28px;">&nbsp;Label #5</td>
+                                        <td class="databarGrow dataText" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 16px; font-family: Consolas, sans-serif; line-height: 1.5em; margin: 0; padding: 0; width: auto; height: 28px;" width="auto" height="28px">&nbsp;Label #5</td>
                                     </tr>
                                 </table>
                             </td>
