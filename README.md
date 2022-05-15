@@ -96,8 +96,18 @@ These data bar charts are compatible in dark mode just as is - they do not requi
 
 ## CSS Animations
 
-For specific email clients (Apple Mail, iOS, etc.) that support CSS animations, you can progressively enhance these bar charts and create an animation effect.
+For some email clients (Apple Mail, iOS, etc.) that support CSS animations, you can progressively enhance these bar charts and create an animation effect.
 
 ![data-bars-animation](https://user-images.githubusercontent.com/6575035/168453112-75657367-f140-49c9-86bd-a4976bbd8ccb.gif)
 
-<!-- ## Dynamic Rendering -->
+In the example above, the `width` from the end label `<td>` cell should be set to `auto` to make this specific CSS animation work properly.
+
+```html
+<table width="600">
+  <tr>
+    <td style="background-color: #ffffff; height: 24px; width: 20%;" height="24" width="20%">Data bar #1</td>
+    <td style="background-color: #0dbd67; height: 24px; width: 35%;" height="24" width="35%"></td>
+    <td style="background-color: #ffffff; height: 24px; width: auto;" height="24" width="auto">Label #1</td> <!-- End label width set to "auto" -->
+  </tr>
+</table>
+```
