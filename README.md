@@ -29,14 +29,14 @@ Start with a `<table>` element and `<td>` cells for the **data bar name**, **dat
 </table>
 ```
 
-Define the `height` and `width` for each `<td>` cell *within* the `<style>` tag.
+Define the `height` and `width` for each `<td>` cell.
 
 ```html
 <table width="600">
   <tr>
-    <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
-    <td style="background-color: #0dbd67; height: 24px; width: 65%;"></td>
-    <td style="background-color: #ffffff; height: 24px; width: 15%;">Label #1</td>
+    <td style="background-color: #ffffff; height: 24px; width: 20%;" height="24" width="20%">Data bar #1</td>
+    <td style="background-color: #0dbd67; height: 24px; width: 65%;" height="24" width="65%"></td>
+    <td style="background-color: #ffffff; height: 24px; width: 15%;" height="24" width="15%">Label #1</td>
   </tr>
 </table>
 ```
@@ -48,9 +48,9 @@ Adjust the `width` values to change the size of the data bar. Since all three co
 ```html
 <table width="600">
   <tr>
-    <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
-    <td style="background-color: #0dbd67; height: 24px; width: 35%;"></td> <!-- The data bar width was reduced from 65% to 35%. The difference is added to the `<td>` cell below. -->
-    <td style="background-color: #ffffff; height: 24px; width: 45%;">Label #1</td>
+    <td style="background-color: #ffffff; height: 24px; width: 20%;" height="24" width="20%">Data bar #1</td>
+    <td style="background-color: #0dbd67; height: 24px; width: 35%;" height="24" width="35%"></td> <!-- The data bar width was reduced from 65% to 35%. The difference is added to the `<td>` cell below. -->
+    <td style="background-color: #ffffff; height: 24px; width: 45%;" height="24" width="45%">Label #1</td>
   </tr>
 </table>
 ```
@@ -63,9 +63,9 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
     <td style="padding: 0 0 2px 0;">
       <table width="600">
         <tr>
-          <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #1</td>
-          <td style="background-color: #0dbd67; height: 24px; width: 35%;"></td>
-          <td style="background-color: #ffffff; height: 24px; width: 45%;">Label #1</td>
+          <td style="background-color: #ffffff; height: 24px; width: 20%;" height="24" width="20%">Data bar #1</td>
+          <td style="background-color: #0dbd67; height: 24px; width: 35%;" height="24" width="35%"></td>
+          <td style="background-color: #ffffff; height: 24px; width: 45%;" height="24" width="45%">Label #1</td>
         </tr>
       </table>
     </td>
@@ -74,9 +74,9 @@ To create a second data bar, nest the code within new `<table>`, `<tr>`, and `<t
     <td style="padding: 0 0 2px 0;">
       <table width="600">
         <tr>
-          <td style="background-color: #ffffff; height: 24px; width: 20%;">Data bar #2</td>
-          <td style="background-color: #0d5fbd; height: 24px; width: 65%;"></td>
-          <td style="background-color: #ffffff; height: 24px; width: 15%;">Label #2</td>
+          <td style="background-color: #ffffff; height: 24px; width: 20%;" height="24" width="20%">Data bar #2</td>
+          <td style="background-color: #0d5fbd; height: 24px; width: 65%;" height="24" width="65%"></td>
+          <td style="background-color: #ffffff; height: 24px; width: 15%;" height="24" width="15%">Label #2</td>
         </tr>
       </table>
     </td>
@@ -97,5 +97,7 @@ These data bar charts are compatible in dark mode just as is - they do not requi
 ## CSS Animations
 
 For specific email clients (Apple Mail, iOS, etc.) that support CSS animations, you can progressively enhance these bar charts and create an animation effect.
+
+![data-bars-animation](https://user-images.githubusercontent.com/6575035/168453112-75657367-f140-49c9-86bd-a4976bbd8ccb.gif)
 
 <!-- ## Dynamic Rendering -->
