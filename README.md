@@ -1,5 +1,8 @@
 # Data Bar Charts in Email Templates
 
+* [Horizontal Data Bars in Email Templates](https://github.com/bdjang/horizontal-bars-email-templates)
+* [Vertical Data Bars in Email Templates](https://github.com/bdjang/vertical-bars-email-templates)
+
 ## Background
 An alternative way to display data without using images is to code horizontal bar charts in HTML/CSS.
 
